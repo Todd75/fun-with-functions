@@ -105,7 +105,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let x = multArr[0];
+  let y = multArr[1];
+  let z = multArr[2];
+  let subTotal = multiply(x, y)[0];
+  let trueTotal = multiply(subTotal, z)[0];
+  let message = `The numbers ${x},${y},${z} have a product of ${trueTotal}.`;
+  return [trueTotal, message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
