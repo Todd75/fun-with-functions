@@ -52,11 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sumOne = a + b + c;
-  let sumTwo = a * b * c;
-  let messageOne = `${a} and ${b} and ${c} sum to ${sumOne}.`;
-  let messageTwo = `The product of ${a} and ${b} and ${c} is ${sumTwo}.`;
-  return [sumOne, sumTwo, messageOne, messageTwo];
+  let sumOne = sum(a, b)[0];
+  let sumTotal = sum(sumOne, c)[0];
+
+  let timeTotal = multiply(multiply(a,b)[0], c);
+  let messageOne = `${a} and ${b} and ${c} sum to ${sumTotal}.`;
+  let messageTwo = `The product of ${a} and ${b} and ${c} is ${timeTotal[0]}.`;
+  return [sumTotal, timeTotal[0], messageOne, messageTwo];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -139,6 +141,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  ArrayList[dynamicArray];
+  
 
 }
 
